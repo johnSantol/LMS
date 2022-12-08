@@ -1,25 +1,16 @@
 <?php
-
-	function parseInput()
-	{
-		$data = file_get_contents("php://input");
-
-		if($data == false)
-			return null;
-
-		return json_decode($data);
-	}
-
-	if($_SERVER['REQUEST_METHOD'] === 'POST')
-	{
-		$data = parseInput();
-
-		echo "fullname: {$data->fullname}\n
-        sr-code: {$data->srcode}\n
-        type: {$data->type}\n";
-	}
-	else
-	{
-		echo "Unsupported request method.";
-	}
+include 'connection/connection.php';
+    $srcode=$_POST['srcode'];
+    $fullname=$_POST['fullname'];
+    $status = "ONLINE";
+    // $phone=$_POST['phone'];
+    // $city=$_POST['city'];
+    $sql = "INSERT INTO `libraryvisitors`(`SR_Code`, `Fullname`, `Status`) VALUES ('$srcode','$fullname','$status')";
+    if (mysqli_query($conn, $sql)) {
+        echo json_encode(array("statusCode"=>200));
+    } 
+    else {
+        echo json_encode(array("statusCode"=>201));
+    }
+    mysqli_close($conn);
 ?>
