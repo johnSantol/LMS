@@ -64,8 +64,37 @@ Instascan.Camera.getCameras().then(function(cameras){
                // document.getElementById('JWT_Token').value=c;
                var jwt = c;
                
-              
-               var code = JSON.stringify(parseJwt(jwt))
+             var code = JSON.stringify(parseJwt(jwt)) 
+             
+             
+             
+             
+             
+             
+             // hindi magrereload ang web site dine, automatic na are in the background. check mo nalang ang console atsaka network sa developer option kung nagana nga
+             var myHeaders = new Headers();
+              myHeaders.append("Content-Type", "application/json");
+
+
+              var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: code,
+                redirect: 'follow'
+              };
+
+              fetch("/json.php", requestOptions)
+                .then(response => response.text())
+                .then(result => console.log(result))
+                .catch(error => console.log('error', error));
+             
+             
+             
+             
+             
+             
+             
+               
                 document.getElementById('JWT_Token').value = code;
                 var obj = JSON.parse(code);
                 document.getElementById('srcode').value = obj.srcode;
