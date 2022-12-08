@@ -8,7 +8,7 @@
     <meta name="LMS" content="LMS">
     <title>Library Management System</title>
 
-<script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
 
 
     <link href="navbar-top-fixed.css" rel="stylesheet">
@@ -18,20 +18,20 @@
     <form action="JSON.php" method="POST">
     <!-- <form action="JSON.php" name ="submit_form" method="post"> //auto submit -->
 
-    <video id="preview" style="border-radius:0% ;margin-left:0px ;width: 500px; height: 400px;" ></video>
-       
-    <!-- <form action=""  method="POST"> -->
-<!-- get JWT_Token from scanned qrcode then parse it -->
-    <input  name="JWT_Token" id="JWT_Token">
-    <input  name="srcode" id="srcode">
-    <input  name="fullname" id="fullname">
-    <input  name="timestamp" id="timestamp">
-    <input  name="type" id="type">
-    <input  name="userid" id="userid">
-    <input class="btn login_btn" type="submit" name="submit_form"/>
+      <video id="preview" style="border-radius:0% ;margin-left:0px ;width: 500px; height: 400px;" ></video>
+
+      <!-- <form action=""  method="POST"> -->
+  <!-- get JWT_Token from scanned qrcode then parse it -->
+      <input  name="JWT_Token" id="JWT_Token">
+      <input  name="srcode" id="srcode">
+      <input  name="fullname" id="fullname">
+      <input  name="timestamp" id="timestamp">
+      <input  name="type" id="type">
+      <input  name="userid" id="userid">
+      <input class="btn login_btn" type="submit" name="submit_form"/>
 <!-- End of parsing -->
 
-</form>
+    </form>
         
     
 
@@ -41,7 +41,6 @@
 </div>
 
 
-</main>
 
 <script>
 let b64DecodeUnicode = str => decodeURIComponent(Array.prototype.map.call(atob(str), c =>'%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2)).join(''))
