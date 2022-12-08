@@ -1,0 +1,72 @@
+
+.inputField {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.inputField input {
+  background-color: #fff;
+  padding: 8px 10px;
+  padding-top: 18px;
+  border: 1.8px solid rgba(107, 107, 107, 0.4);
+  border-radius: 4px;
+  width: 70%;
+  color: #000;
+}
+
+.inputField input:focus {
+  border: 2px solid #1d9bf0;
+  outline: none;
+}
+
+.inputField span {
+  pointer-events: none;
+  /*opacity: 0.5;*/
+  position: absolute;
+  padding-left: 50px;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: text;
+  color: #6e767d;  
+}
+
+.inputField input:focus+span,
+.inputField input:not(:placeholder-shown)+span {
+  top: 7px;
+  -webkit-transform: translateY(-30%) translateX(0px);
+  transform: translateY(-30%) translateX(0);
+  font-size: 12px;
+}
+
+.inputField input,
+.inputField span {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.inputBtn input{
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.inputBtn input:hover {
+  background-color: #088F8F;
+  color: #fff;
+}
+.submit-btn {
+  background-color: #088F8F;
+  border-radius: 30px;
+  border: 1px solid #fff;
+  color: #fff;
+  width: 200px;
+  height: 45px;
+  margin-bottom: 40px;
+}
