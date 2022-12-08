@@ -15,7 +15,7 @@
   </head>
   <body>
  
-    <form action="JSON.php" method="GET">
+    <form action="JSON.php" method="POST">
     <!-- <form action="JSON.php" name ="submit_form" method="post"> //auto submit -->
 
     <video id="preview" style="border-radius:0% ;margin-left:0px ;width: 500px; height: 400px;" ></video>
